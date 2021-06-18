@@ -1,0 +1,9 @@
+from urllib.request import urlopen
+
+shakespeare = urlopen('http://composingprograms.com/shakespeare.txt')
+word = set(shakespeare.read().decode().split()) 
+#read the data from the opened URL, then decode the data into text, and finally split the text into words. All of those words are placed in a set.
+
+{w for w in words if len(w) == 6 and w[::-1] in words}
+#The cryptic notation w[::-1] enumerates each letter in a word, but the -1 dictates to step backwards
+
