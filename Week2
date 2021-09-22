@@ -1,0 +1,21 @@
+#####assert Statement
+assert r > 0, 'A length should be positive'
+
+def make_adder(n):
+"""
+add_two = make_adder(2)
+add_two(3)
+make_adder(1)(2)
+k=1,n=2
+"""
+  def adder(k):
+    return n+k
+  return adder
+
+
+def print_sums(n):
+    print(n)
+    def nex_sum(k):
+        return print_sums(n + k)
+    return next_sum
+    
