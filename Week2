@@ -1,6 +1,6 @@
 #####assert Statement
 assert r > 0, 'A length should be positive'
-
+#####higher-order function
 def make_adder(n):
 """
 add_two = make_adder(2)
@@ -18,4 +18,55 @@ def print_sums(n):
     def nex_sum(k):
         return print_sums(n + k)
     return next_sum
+
+######Recursion
+python3 -i 06.py   interactive mode 
+pyhton3 -m 06.py   module_name
+
+def sum_digit(n):
+	if n < 10:
+		return n
+	else:
+		all_but_last, last = n // 10, n % 10
+		return sum_digit(all_but_last) + last
     
+######Examples1： cascade1
+def cascade(n):
+  if n < 10:
+    print(n)
+  else:
+    print(n)
+    cascade(n//10)
+    print(n)
+    
+######Examples1： cascade2
+def cascade(n):
+  print(n)
+  if n >= 10:
+    cascade(n//10)
+    print(n)
+    
+#######Example2: Fibonacci
+def fib(n):
+  if n == 0:
+    return 0
+  elif n == 1:
+    return 1
+  else:
+    return fib(n-2) + fib(n-1)
+    
+########Example3: count partition
+def count_part(n,m):
+  if n == 0:
+    return 1
+  elif n < 0:
+    return 0
+  elif m == 0:
+    return 0
+  else:
+    with_m = count_part(n-m, m)
+    wo_m = count_part(n,m-1)
+    return with_m + wo_m
+
+
+
