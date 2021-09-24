@@ -1,0 +1,14 @@
+[x*2 for x in range(10) if x % 2]
+**2 pow
+
+from fractions import gcd
+def rational(n, d)
+  g = gcd(n,d)##greatest common divisor
+  return [n//g, d//g]
+###list
+d = []
+###dictionary 
+d = {}  
+d = {0: 'Hello', 1: 'goodbye', 'a': True} 
+d[0]
+d['a']
