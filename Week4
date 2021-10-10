@@ -1,0 +1,44 @@
+def f(x):
+    x = 4
+    def g(y):
+        def h(z):
+            nonlocal x
+            x = x + 1
+            return x + y + z
+        return h
+    return g
+a = f(1)
+b = a(2)
+total = b(3) + b(4)
+
+
+def fib(n):
+    curr, next, i = 0, 1, 0
+    while i < n:
+        curr, next = next, 
+                     curr + next
+		 i += 1
+    return curr
+
+
+def fib(n):
+    if n <= 1:
+        return n
+    else:
+        return fib(n-1) +\
+               fib(n-2)
+
+
+>>> def plus_minus(x):
+...		yield x
+...		yield -x
+
+>>> t = plus_minus(3)
+>>> next(t)
+3
+>>> next(t)
+-3
+>>> t
+<generator object>
+>>> next(t)
+StopIteration
